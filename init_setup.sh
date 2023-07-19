@@ -6,6 +6,8 @@ echo [$(date)]: "activate environment"
 source activate ./env
 echo [$(date)]: "install requirements"
 pip install -r requirements.txt
+echo [$(date)]: "installing pytorch"
+conda install pytorch torchvision torchaudio cpuonly -c pytorch
 echo [$(date)]: "END"
 # to remove everything -
 # rm -rf env/ .gitignore conda.yaml README.md .git/
